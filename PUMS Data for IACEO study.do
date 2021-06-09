@@ -33,7 +33,7 @@ recode rac3p (002=1)(else=0), gen(africanamerican)
 	tab fod1p if africanamerican==1 [fw=pwgtp]
 
 ***///Educational attainment
-** SCHL is the educational attainment variables
+** SCHL is the educational attainment variable
 	Master's degree or higher includes values of schl>=22
 	gen ms_higher=0
 	replace ms_higher=1 if schl>=22
@@ -42,7 +42,7 @@ recode rac3p (002=1)(else=0), gen(africanamerican)
 	tab ms_higher if africanamerican==1 [fw=pwgtp]
 	
 ***///Occupation
-** occp is the occupation variables
+** occp is the occupation variable
 	tab occp if asianindian==1 [fw=pwgtp]
 	tab occp is white==1 [fw=pwgtp]
 	tab occp if africanamerican==1 [fw=pwgtp]
