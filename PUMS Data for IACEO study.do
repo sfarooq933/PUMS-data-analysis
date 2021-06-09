@@ -23,7 +23,7 @@ recode rac3p (002=1)(else=0), gen(africanamerican)
 	mean(wagp) [fw=pwgtp]
 	mean(wagp) if asianindian==1 [fw=pwgtp]
 	mean(wagp) if white==1 [fw=pwgtp]
-	
+	mean(wagp) if africanamerican==1 [fw=pwgtp]
 
 
 ***///Field of study
