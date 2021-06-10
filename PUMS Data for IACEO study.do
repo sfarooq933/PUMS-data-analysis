@@ -7,6 +7,8 @@ Analysis of PUMS data
 recode puma (1901/1907=1)(2001/2006=1)(2301/2322=1)///
 	(2501/2516=1)(else=0), gen(metrodfw)
 	
+***keeping only the observations in metrodfw
+keep if metrodfw==1
 
 	
 ***///setting race variables
@@ -23,7 +25,7 @@ recode rac3p (002=1)(else=0), gen(africanamerican)
 	mean(wagp) [fw=pwgtp]
 	mean(wagp) if asianindian==1 [fw=pwgtp]
 	mean(wagp) if white==1 [fw=pwgtp]
-	mean(wagp) if africanamerican==1 [fw=pwgtp]
+	
 
 
 ***///Field of study
